@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Arduino Geek Club</title>
+
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/arduino.css"/>
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css"/>
+
+    <style>
+        .specs {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = window.location.search.match(/print-pdf/gi)
+            ? "css/print/pdf.css"
+            : "css/print/paper.css";
+        document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <img src="images/arduino.svg"/>
+            <h3>Arduino</h3>
+        </section>
+
+        <section>
+            <h3>Qué es Arduino?</h3>
+            <small class="fragment">Simple, low cost tools for creating digital projects by non-engineers</small>
+            <ul>
+                <li class="fragment">open source hard+soft</li>
+                <li class="fragment">Arduino programming language based on Wiring</li>
+                <li class="fragment">Arduino software (IDE) based on Processing</li>
+            </ul>
+            <br/>
+            <br/>
+            <small class="fragment">Comenzó como Wiring. Fue tesis de grado de Hernando Barragán<br/>
+                <a href="https://arduinohistory.github.io/">Historia de Hernando Barragán</a> -
+                <a href="http://people.interactionivrea.org/h.barragan/thesis/thesis_low_res.pdf">Tesis de
+                    Wiring</a></small>
+        </section>
+        <section data-background="images/arduino-uno-r3.jpg">
+            <section></section>
+            <section>
+                <div class="fragment specs">
+                    <ul>
+                        <li>Micro: ATmega328</li>
+                        <li>2 KB SRAM</li>
+                        <li>Operating Voltage: 5V</li>
+                        <li>Input Voltage (recommended): 7-12V</li>
+                        <li>Digital I/O Pins: 14 (of which 6 provide PWM output)</li>
+                        <li>Analog Input Pins: 6</li>
+                        <li>Flash Memory: <b>32 KB</b> of which 0.5 KB used by bootloader</li>
+                        <li>EEPROM: 1 KB</li>
+                        <li>Clock Speed: 16 MHz</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section data-background="images/arduino-mega.jpeg">
+            <section></section>
+            <section>
+                <div class="fragment specs">
+                    <ul>
+                        <li>Micro: ATmega2560</li>
+                        <li>8 KB SRAM</li>
+                        <li>Operating Voltage: 5V</li>
+                        <li>Input Voltage (recommended): 7-12V</li>
+                        <li>Digital I/O Pins: 54 (of which 15 provide PWM output)</li>
+                        <li>Analog Input Pins: 16</li>
+                        <li>Flash Memory: <b>256 KB</b> of which 8 KB used by bootloader</li>
+                        <li>EEPROM: 4 KB</li>
+                        <li>Clock Speed: 16 MHz</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section data-background="images/node-mcu.jpg">
+            <section></section>
+            <section>
+                <div class="fragment specs">
+                    <ul>
+                        <li>Micro: Tensilica 32-bit RISC CPU Xtensa LX106</li>
+                        <li>64 KB SRAM</li>
+                        <li>Operating Voltage: 3.3V</li>
+                        <li>Input Voltage: 7-12V</li>
+                        <li>Digital I/O Pins (DIO): 16</li>
+                        <li>Analog Input Pins (ADC): 1</li>
+                        <li>Flash Memory: 4 MB</li>
+                        <li>Clock Speed: 80 Mhz</li>
+                        <li>EEPROM: 512 KB</li>
+                        <li>Wi-Fi: IEEE 802.11 b/g/n</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section data-background="images/rpi-zero.jpg">
+            <section></section>
+            <section>
+                <div class="fragment specs">
+                    <ul>
+                        <li>Micro: 1GHz, Single-core CPU</li>
+                        <li>512MB RAM</li>
+                        <li>Mini HDMI and USB On-The-Go ports</li>
+                        <li>Micro USB power</li>
+                        <li>HAT-compatible 40-pin header</li>
+                        <li>WiFi / Bluetooth 4.0</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section data-background="images/intel.jpg">
+            <section></section>
+            <section>
+                <div class="specs">
+                    <ul>
+                        <li>Micro: SoC Quark X1000</li>
+                        <li>Operating Voltage: 3.3V / 5V</li>
+                        <li>Input Voltage: 7-15V</li>
+                        <li>Digital I/O Pins: 14 (of which 6 provide 8/12-bit PWM output)</li>
+                        <li>Analog Input Pins: 6</li>
+                        <li>Flash Memory: 512 kB</li>
+                        <li>RAM: <b>256 MB</b> DDR3</li>
+                        <li>SRAM: 512 kB</li>
+                        <li>Flash Storage: 8MB</li>
+                        <li>EEPROM: 8kB</li>
+                        <li>Clock Speed: 400 MHz</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section data-background="images/sensors.jpg">
+                <h3 class="specs">¿Para qué se puede usar?</h3>
+            </section>
+            <section data-background="images/ketchup.gif"></section>
+            <section data-background="images/killer-hand.gif"></section>
+            <section data-background="images/tinder.gif"></section>
+        </section>
+        <section>
+            Arduino IDE
+            <img src="images/arduino-ide.png"/>
+        </section>
+        <section>
+            <h3>Arduino IDE: Features</h3>
+            <ul>
+                <li>MultiPlataforma</li>
+                <li>Open-source</li>
+                <li>Módulos</li>
+                <li>Soporte múltiples placas</li>
+                <li>Monitor Serie</li>
+                <li>Variedad de Ejemplos</li>
+            </ul>
+        </section>
+        <section>
+            <h3>E/S</h3>
+            <img src="images/blink-arduino.gif"/>
+        </section>
+        <section>
+            <h3>digital</h3>
+            <ul>
+                <li class="fragment">
+                    <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/">digitalRead(pin)</a>
+                </li>
+                <li class="fragment">
+                    <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/">digitalWrite(pin,
+                        HIGH|LOW)</a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>analog</h3>
+            <ul>
+                <li class="fragment">
+                    <a href="https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/">analogRead(pin)</a>
+                </li>
+                <li class="fragment">
+                    <a href="https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/">analogWrite(pin,
+                        value)</a>
+                </li>
+            </ul>
+            <br/>
+            <img class="fragment" src="images/pwm.png"/>
+        </section>
+        <section>
+            <h3>Blink</h3>
+            <pre class="fragment"><code data-trim>
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT); // LED_BUILTIN = 13 🙂
+}
+
+void loop() {
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(1000);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(1000);
+}
+  </code></pre>
+            <small class="fragment">¿Y si queremos encender un led fuera de la placa?</small>
+        </section>
+        <section>
+            <h3>Protoboard</h3>
+            <img src="images/protoboard.jpg"/>
+        </section>
+        <section>
+            <h3>Blink external LED</h3>
+            <img class="fragment" src="images/led-example.png"/>
+            <small class="fragment">¿Hay que cambiar la constante LED_BUILTIN?</small>
+        </section>
+        <section>
+            <h3>Fade</h3>
+            <pre class="fragment"><code data-trim>
+int brightness = 0;
+int fadeAmount = 5;
+
+void setup() {
+  pinMode(9, OUTPUT);
+}
+
+void loop() {
+  analogWrite(9, brightness);
+  brightness = brightness + fadeAmount;
+  if (brightness <= 0 || brightness >= 255) {
+    fadeAmount = -fadeAmount;
+  }
+  delay(30);
+}
+  </code></pre>
+        </section>
+        <section>
+            <h3>Comunicación Serial</h3>
+            <pre class="fragment"><code data-trim>
+int count = 0;
+unsigned long previousMillis = 0;
+
+void setup() {
+    Serial.begin(9600);
+    Serial.println("Boom");
+}
+
+void loop(){
+    unsigned long currentMillis = millis();
+
+    if (currentMillis - previousMillis >= 1000) {
+        previousMillis = currentMillis;
+        Serial.println("Count: " + String(++count));
+    }
+}
+</code></pre>
+            <small class="fragment">¿Por qué no se usamos delay()?</small>
+        </section>
+
+        <section>
+            <h3>Librerías</h3>
+            <pre class="fragment"><code data-trim>
+#include &lt;EEPROM.h&gt;
+
+void setup() {
+    Serial.begin(9600);
+    Serial.println(EEPROM.length());
+}
+
+void loop() {}
+  </code></pre>
+        </section>
+        <section>
+            <h3>Comunicación con el exterior</h3>
+            <ul>
+                <li>Ethernet</li>
+                <li>WiFi</li>
+                <li>IR</li>
+                <li>NFC</li>
+                <li>Bluetooth</li>
+                <li>LoRa</li>
+                <li>RF (433MhZ)</li>
+                <li>TX/RX (Interfaz serie)</li>
+                <li>...?</li>
+            </ul>
+        </section>
+<!--        <section>-->
+<!--            <section>Interrupciones</section>-->
+<!--            <section>-->
+<!--                Tipos de interrupciones-->
+<!--                - external-->
+<!--                - pin change-->
+<!--            </section>-->
+<!--            <section>-->
+<!--                pin change:-->
+<!--                -rising-->
+<!--                -falling-->
+<!--                -low-->
+
+<!--                attachInterrupt(digitalPinToInterrupt(pin), ISR, mode);-->
+<!--                mode-->
+<!--                RISING: To trigger an interrupt when the pin transits from LOW to HIGH.-->
+<!--                FALLING: To trigger an interrupt when the pin transits from HIGH to LOW.-->
+<!--                CHANGE: To trigger an interrupt when the pin transits from LOW to HIGH or HIGH to LOW (i.e., when the-->
+<!--                pin state changes ).-->
+<!--            </section>-->
+<!--            <section>-->
+<!--                where?-->
+<!--                UNO , NANO-->
+<!--                2,3-->
+
+<!--                Mega-->
+<!--                2,3,18,19,20,21-->
+<!--            </section>-->
+<!--            <section>-->
+<!--                noInterrupts();-->
+<!--                // critical, time-sensitive code here-->
+<!--                interrupts();-->
+<!--                // other code here-->
+<!--            </section>-->
+<!--        </section>-->
+        <section>
+            Playground
+        </section>
+        <section>
+            <h3>¿Esto como sigue?</h3>
+            <ul>
+                <li>Interrupciones</li>
+                <li>ESP8266 - WiFi</li>
+                <li>IR Commands</li>
+                <li>Read Temp/Hum</li>
+                <li>MQTT PubSubClient</li>
+                <li>Cloud solutions</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Nos vemos la próxima 🙂</h3>
+        </section>
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        notes_pointer: {
+            pointer: {
+                size: 10,  // in pixels (scaled like the rest of reveal.js)
+                color: 'rgba(255, 0, 0, 0.8)',  // something valid for css background-color
+                key: 'A'
+            },
+            notes: {
+                key: 'S'
+            }
+        },
+        dependencies: [
+            {src: "plugin/markdown/marked.js"},
+            {src: "plugin/markdown/markdown.js"},
+            {src: "plugin/notes/notes.js", async: true},
+            {src: "plugin/highlight/highlight.js", async: true},
+            {src: 'node_modules/reveal.js-notes-pointer/notes-pointer.js', async: true}
+        ]
+    });
+</script>
+</body>
+</html>
