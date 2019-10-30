@@ -1,0 +1,136 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+@font-face {
+  font-family: Typonine Mono Regular;
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001720.eot);
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001720.eot#iefix)
+      format("embedded-opentype"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001720.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001720.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service)
+      format("svg");
+}
+
+@font-face {
+  font-family: Typonine Mono Medium;
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001722.eot);
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001722.eot#iefix)
+      format("embedded-opentype"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001722.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001722.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service)
+      format("svg");
+}
+
+@font-face {
+  font-family: Typonine Sans Light;
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001726.eot);
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001726.eot#iefix)
+      format("embedded-opentype"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001726.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001726.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service)
+      format("svg");
+}
+
+@font-face {
+  font-family: Typonine Sans Regular;
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001728.eot);
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001728.eot#iefix)
+      format("embedded-opentype"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001728.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001728.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service)
+      format("svg");
+}
+
+@font-face {
+  font-family: Typonine Sans Regular Italic;
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001729.eot);
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001729.eot#iefix)
+      format("embedded-opentype"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001729.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001729.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service)
+      format("svg");
+}
+
+@font-face {
+  font-family: Typonine Sans Medium;
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001730.eot);
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001730.eot#iefix)
+      format("embedded-opentype"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001730.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001730.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service)
+      format("svg");
+}
+
+@font-face {
+  font-family: Typonine Sans Bold;
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001732.eot);
+  src: url(https://content.arduino.cc/fonts/WF-028075-009795-001732.eot#iefix)
+      format("embedded-opentype"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001732.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001732.woff)
+      format("woff"),
+    url(https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service)
+      format("svg");
+}
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: "Typonine Sans", sans-serif;
+$mainColor: #000;
+$headingFont: "Typonine Sans", Impact, sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: #00878f;
+$linkColorHover: lighten($linkColor, 20%);
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+section.has-dark-background {
+  &,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+  }
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+img {
+  border: none !important;
+  box-shadow: none !important;
+}
